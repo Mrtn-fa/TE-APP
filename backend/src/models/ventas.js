@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 
 
 var Ventas = new Schema({
-    date_closed: Date,
+    date_closed: String,
     zone: String,
     waiter: String,
     cashier: String,
@@ -15,7 +15,7 @@ var Ventas = new Schema({
         quantity: Number
     }],
     diners: Number,
-    date_opened: Date,
+    date_opened: String,
     table: Number,
     total: Number,
     id: String,
