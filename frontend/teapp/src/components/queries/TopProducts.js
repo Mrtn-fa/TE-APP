@@ -1,4 +1,4 @@
-import {React, useMemo} from "react";
+import { React } from "react";
 
 import {
     Chart as ChartJS,
@@ -10,9 +10,7 @@ import {
     Tooltip,
     Legend,
     Filler,
-    LineElement,
 } from "chart.js";
-import { Bar } from "react-chartjs-2";
 ChartJS.register(
     CategoryScale,
     LinearScale,

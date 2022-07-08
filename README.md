@@ -5,13 +5,17 @@ Toteat app
 ## Conexión con MongoDB
 1. Go to backend/
 2. Rename ".env_sample" for ".env"
-3. Open it and change "[your_key_here]" for the given key
+3. Open it and change "[your_key_here]" for the secret key
 
 ## Backend
-1. Go to backend/
-2. run "npm i express mongoose body-parser dotenv nodemon"
+1. Open a terminal in backend/
+2. run "npm install package.json"
 3. run "npm run start"
 
 ## Frontend
-1. go to frontend/teapp
-2. run "npm start"
+1. Open a terminal in frontend/teapp/
+2. run "npm install package.json"
+3. run "npm start"
+
+## Web
+1. go to http://localhost:3000
