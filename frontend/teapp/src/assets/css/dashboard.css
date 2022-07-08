@@ -1,0 +1,142 @@
+.dashboard{
+    background-color: rgb(255, 248, 240);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    font-family: Montserrat, monospace;
+    font-size: 24px;
+  }
+.dashboard-container{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.dashboard-info{
+    display: flex;
+    flex-direction: column;
+}
+.dashboard-name{
+    font-weight: 600;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+  .navbar{
+    background-color: rgb(205, 176, 138);
+    padding: 128px 16px 0 16px;
+    box-shadow: 8px 0 8px 1px gainsboro;
+  }
+  .container{
+    position: sticky;
+    top: 128px;
+    left: 0;
+  }
+  .nav-link{
+    font-size: 32px;    
+    text-decoration: none;
+    color: rgb(100, 72, 11);
+    transition: color 0.25s;
+
+  }
+  .nav-link:hover{
+    color: black;
+  }
+  .dashboard-general{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 24px 8%;
+    background-color: rgb(255, 239, 223);
+    box-shadow: 0px 0px 16px 4px gainsboro;
+    border-radius: 16px;
+  }
+  .dashboard-card{
+    text-align: center;
+    width: 400px;
+  }
+  .dashboard-card .dashboard-title{
+    font-size: 24px;
+  }
+  .dashboard-general .dashboard-title{
+    color: rgb(186, 173, 149)
+  }
+  .dashboard-card .dashboard-value{
+    font-size: 32px;
+  }
+
+  .dashboard-specific{
+    min-height: 100vh;
+    margin-top: 32px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 48px 0;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  
+  }
+  .dashboard-content{
+    flex: 1;
+    padding: 0 64px;
+  }
+  .dashboard-content img {
+    width: 48px;
+    height: 48px;
+    padding: 0 16px;
+  }
+  
+.pie{
+    width: 400px;
+    height: 400px;
+    padding: 16px;
+}
+.dashboard-group{
+    display: flex;
+    padding: 16px 64px;
+    justify-content: center;
+}
+.col{
+    flex-direction: column;
+}
+.reverse{
+    flex-direction: row-reverse;
+}
+.card{
+    box-shadow: 0 0 16px 4px gainsboro;
+    border-radius: 32px;
+    flex-shrink: 0;
+    padding: 16px 16px 24px 16px;
+}
+.graph{
+    padding: 0 16px;
+}
+.graph li{
+    font-size: 16px;
+}
+.dashboard-group hr{
+    border: 1px solid rgb(240, 233, 233);
+    margin: 16px 0;
+    border-radius: 4px;
+}
+.row {
+    flex-direction: row-reverse;
+}
+.bar{
+    width: 600px;
+}
+.list{
+    margin-left: 16px;
+    border-radius: 16px;
+    padding: 16px 0 16px 0;
+    box-shadow:0 0 16px 1px rgb(234, 234, 234);
+    font-size: 20px;
+}
+.list ol{
+    margin: 16px 0 0 0;
+}
+.bold{
+    font-weight: 600;
+}
+.mono{
+  font-family: monospace;
+  color: #666
+}
