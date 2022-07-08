@@ -6,12 +6,12 @@ import Dashboard from './components/Dashboard';
 const Router = () => {
     return(
         <BrowserRouter>
-            <Header />
-            <Routes>
-                <Route exact path='/' element={<Dashboard />} />
-                
-
-            </Routes>
+            <div className='dashboard'>
+                <Header />
+                <Routes>
+                    <Route exact path='/' element={<Dashboard />} />
+                </Routes>
+            </div>
         </BrowserRouter>
     );
 }

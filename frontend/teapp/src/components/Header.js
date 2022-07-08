@@ -7,15 +7,7 @@ const Header = () => {
     return(
         <nav id='navbar' className='navbar'>
             <div className='container'>
-                <NavLink to="/" className="navbar-brand">
-                    <img className='App-logo' src={logo} alt='logo' width='80'/>
-                </NavLink>
-
-                <ul className='navbar-nav'>
-                    <li className='nav-item'>
-                        <NavLink to='ventas' className='nav-link'>Ventas</NavLink>
-                    </li>
-                </ul>
+                <NavLink to='/' className='nav-link'>Dashboard</NavLink>
             </div>
         </nav>
     );

@@ -1,6 +1,5 @@
 import Router from './Router';
-import './assets/css/App.css';
-
+import './assets/css/dashboard.css';
 function App() {
   return(
   <div className="App">
