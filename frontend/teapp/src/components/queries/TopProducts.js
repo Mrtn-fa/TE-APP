@@ -30,20 +30,20 @@ const TopProducts = ({tableData}) => {
         for (const index in tableData){
             total[tableData[index].name] = tableData[index].quantity; 
         }
-        
         return Object.keys(total).sort(function(a,b){return total[b]-total[a]})
     })();
     return(
         <div className="dashboard-card list">
-            <div className="dashboard-title bold">Ranking de productos</div>
+            <div className="dashboard-title bold mono">Ranking de productos</div>
             <ol>
             {
                 (() => {
                     var doc = [];
                     for (const index in topProductsData){
+                        const item = topProductsData[index]
                         doc.push(
-                        <li>
-                            {topProductsData[index]}
+                        <li key={item}>
+                            {item}
                         </li>
                      )
                     }

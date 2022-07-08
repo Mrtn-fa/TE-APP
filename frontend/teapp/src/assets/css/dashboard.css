@@ -92,6 +92,7 @@
 .dashboard-group{
     display: flex;
     padding: 16px 64px;
+    justify-content: center;
 }
 .col{
     flex-direction: column;
@@ -112,9 +113,9 @@
     font-size: 16px;
 }
 .dashboard-group hr{
-    border: 0.1px solid rgb(228, 226, 226);
+    border: 1px solid rgb(240, 233, 233);
     margin: 16px 0;
-    
+    border-radius: 4px;
 }
 .row {
     flex-direction: row-reverse;
@@ -123,12 +124,10 @@
     width: 600px;
 }
 .list{
-    background-color: rgb(255, 252, 154);
-
     margin-left: 16px;
     border-radius: 16px;
-    padding: 16px 0 8px 0;
-    box-shadow:0 0 16px 1px rgb(255, 252, 193);
+    padding: 16px 0 16px 0;
+    box-shadow:0 0 16px 1px rgb(234, 234, 234);
     font-size: 20px;
 }
 .list ol{
@@ -136,4 +135,8 @@
 }
 .bold{
     font-weight: 600;
+}
+.mono{
+  font-family: monospace;
+  color: #666
 }

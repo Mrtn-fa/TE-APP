@@ -44,14 +44,35 @@ const DateData = ({tableData}) => {
         return {
             datasets: [
                 {
-                    label: "Clientes por día en los últimos 30 días",
-                    data: daysData
+                    label: "Media de clientes en el último mes",
+                    data: daysData,
+                    backgroundColor: "rgb(250, 184, 97)"
                 }
             ]
         }
     }, [])
     const ClientOptions = {
-        maintainAspectRatio: true,
+        plugins: {
+            title: {
+                display: true,
+                text: "Clientes promedio por mes",
+                font: {
+                    size: 24,
+                    family: "monospace"
+                }
+            },
+            legend: {
+                position: "bottom"
+            },
+            tooltip: {
+                callbacks: {
+                    title: (context) => {
+                        const days = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+                        return days[context[0].label];
+                    }
+                }
+            }
+        },
         scales: {
             x: {
                 ticks: {
@@ -68,7 +89,6 @@ const DateData = ({tableData}) => {
     const incomeData = (() => {
         const incomePerDay = {};
         for (const index in tableData){
-            const year = tableData[index].date.year;
             const month = tableData[index].date.month;
             const day = tableData[index].date.day;
             const date = `${month}-${day}`;
@@ -87,17 +107,32 @@ const DateData = ({tableData}) => {
         }
     })
     const IncomeOptions = {
-        maintainAspectRatio: true,
+        borderColor: "rgb(24, 181, 53)",
+        plugins: {
+            title: {
+                display: true,
+                text: "Ingresos últimos 30 días",
+                font: {
+                    size: 24,
+                    family: "monospace"
+                }
+            },
+            legend: {
+                position: "bottom"
+            },
+        },
         tension: 0.4,
         fill:true,
-        backgroundColor: "rgba(25,123,43,0.5)",
+        backgroundColor: "rgba(96, 204, 116, 0.5)",
         scales: {
             x: {
                 reverse: true,
+            },
+            y: {
+                beginAtZero: true,
                 ticks: {
-                    type: "time",
-                    time: {
-                        unit: 'day'
+                    callback: (value, index, ticks) => {
+                        return "$"+value+"M"
                     }
                 }
             }

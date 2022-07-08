@@ -52,7 +52,7 @@ const Dashboard = () => {
                 <div className='dashboard-group row card'>
                     <div className='dashboard-group col'>
                         {topproducts.length > 0 ? (<TopProducts tableData={topproducts}/>):(<div>No hay información que mostrar.</div>)}
-                        <hr></hr>
+                        
                         {category.length > 0 ? (<CatTotal tableData={category}/>):(<div>No hay información que mostrar.</div>)}
                     </div>
                     {datedata.length > 0 ? (<DateData tableData={datedata}/>):(<div>No hay información que mostrar.</div>)}

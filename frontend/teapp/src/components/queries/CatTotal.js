@@ -67,13 +67,28 @@ const CatTotal = ({tableData}) => {
     }, [])
     const options = {
         plugins: {
+            title: {
+                display: true,
+                text: "Porcentaje por categoría",
+                font: {
+                    size: 24,
+                    family: "monospace"
+                }
+            },
             legend: {
                 position: "bottom"
+            },
+            tooltip: {
+                callbacks: {
+                    label: (context) => {
+                        return `${context.label}: ${context.parsed}%`
+                    }
+                }
             }
         }
     };
 
-    return(<div className="dashboard-card pie"><div className="dashboard-title bold">Porcentaje por categoría</div><Pie data={data} options={options}/></div>);
+    return(<div className="dashboard-card pie"><Pie data={data} options={options}/></div>);
 }
 
 export default CatTotal;
